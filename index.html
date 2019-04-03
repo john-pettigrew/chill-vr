@@ -1,0 +1,22 @@
+<html>
+    <head>
+		<title>Chill VR</title>
+        <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+        <script src="/dist/aframe-extras.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-entity camera="active:true" position="-1.9 0 -3" look-controls wasd-controls></a-entity>
+		    <a-asset-item position="-1 -0.5 3" id="room-obj" src="room.glb"></a-asset-item>
+		    <a-asset-item position="-1 -0.5 3" id="mug-obj" src="low_poly_mug.glb"></a-asset-item>
+
+		    <a-entity gltf-model="#room-obj" rotation="0 180 0"></a-entity>
+			<a-entity animation-mixer="clip: *" gltf-model="low_poly_mug.glb" position="-0.5 -1.434 -4.547" rotation="0 -60" scale="0.2 0.2 0.2"></a-entity>
+
+		    <a-entity position="-6.408 2.827 4.726" light="angle: 50; color: #f6eab7; intensity: 1; type: spot" rotation="-55.76598220008303 -146.4703577894485 141.2879545324902" visible=""></a-entity>
+		    <a-entity position="-6.408 2.811 0.230" light="angle: 50; color: #f6eab7; intensity: 1; type: spot" rotation="-80 0" visible=""></a-entity>
+		    <a-entity position="-6.410 2.839 -3.768" light="angle: 50; color: #f6eab7; intensity: 1; type: spot" rotation="-64.05324374885525 -103.0269788892441 106.8617854120547" visible=""></a-entity>
+		    <a-entity position="-8.859 1.275 -8.246" light="color: #c0bbe7; intensity: 0.2; type: ambient" rotation=""></a-entity>
+        </a-scene>
+    </body>
+</html>
